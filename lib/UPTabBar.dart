@@ -8,7 +8,7 @@ class UPMainTabBarCtrl extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: UPTabBar(title: 'Flutter TabBar Demo'),
+      home:const UPTabBar(title: 'Flutter TabBar Demo'),
     );
   }
 }

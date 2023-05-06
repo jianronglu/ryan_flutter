@@ -23,19 +23,19 @@ class _ThemeAppState extends State<ThemeApp> {
 
         appBarTheme: AppBarTheme(//APPBar 主题
           backgroundColor: UPCommonColorUtil.colorWithHexStr(),
-          titleTextStyle: TextStyle(
+          titleTextStyle:const TextStyle(
             fontSize: 30,
-            color: Color.fromRGBO(255, 0, 0, 1),//标题红色
+            color: const Color.fromRGBO(255, 0, 0, 1),//标题红色
           ),
           // elevation: 100,
           shadowColor: Colors.black12,//导航栏阴影颜色
         ),
 
         textTheme: TextTheme(
-          titleLarge: TextStyle(
+          titleLarge: const TextStyle(
             fontSize: 50,
           ),
-          titleMedium: TextStyle(
+          titleMedium: const TextStyle(
             fontSize: 45,
             color: Colors.red,
           ),
@@ -50,7 +50,7 @@ class _ThemeAppState extends State<ThemeApp> {
         ),
       ),
 
-      home: ThemeUseage(),
+      home:const ThemeUseage(),
     );
   }
 }
@@ -67,11 +67,11 @@ class _ThemeUseageState extends State<ThemeUseage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Theme 体验'),
+        title:const Text('Theme 体验'),
       ),
       // floatingActionButton: Text('button',style: TextStyle(color: Colors.red, fontSize: 20, backgroundColor: Colors.cyan),),
       floatingActionButton: FloatingActionButton(
-        child: Text('btn',style: TextStyle(color: Colors.red, fontSize: 20/*, backgroundColor: Colors.cyan*/),),
+        child:const Text('btn',style: TextStyle(color: Colors.red, fontSize: 20/*, backgroundColor: Colors.cyan*/),),
         tooltip: '哈哈哈',// 长按的时候会提示
         onPressed:() {
           print('点击了按钮');

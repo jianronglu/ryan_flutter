@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
+import 'package:ryan_flutter/study/interface/ryan_dio.dart';
+
 class HttpClientApp extends StatelessWidget {
   const HttpClientApp({Key? key}) : super(key: key);
 
@@ -34,7 +36,7 @@ class HttpClientApp extends StatelessWidget {
         ),
         body: Center(
           child: ElevatedButton(
-            onPressed: () => gethttpClientData(),
+            onPressed: () => ryan_dio(),
             child: Text('request', style: TextStyle(fontSize: 30),),
           ),
         ),

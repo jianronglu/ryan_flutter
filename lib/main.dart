@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:ryan_flutter/UPCupTabBarCtl.dart';
 import 'package:ryan_flutter/UPHomePage.dart';
+import 'package:ryan_flutter/study/interface/ryan_http_client.dart';
 // import 'package:ryan_flutter/study/interface/ryan_theme.dart';
 // import 'package:ryan_flutter/study/interface/ryan_url_launcher.dart';
 // import 'package:ryan_flutter/UPToolTabBar.dart';
@@ -12,7 +13,7 @@ void main() {
   // runApp(const UPCupertinoApp());// iOS风格控件
   // runApp(const UPToolTabBar());
   // runApp(UPCarouselView());
-  runApp(const RyanStateApp());
+  runApp(const HttpClientApp());
 }
 
 class RyanApp extends StatefulWidget {

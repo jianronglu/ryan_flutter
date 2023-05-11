@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:ryan_flutter/study/common/ryan_common_response.dart';
 import 'dart:io';
-
 import 'package:ryan_flutter/study/interface/ryan_dio.dart';
+import 'package:ryan_flutter/study/common/ryan_constant_define.dart';
 
 class HttpClientApp extends StatelessWidget {
   const HttpClientApp({Key? key}) : super(key: key);
@@ -36,7 +37,15 @@ class HttpClientApp extends StatelessWidget {
         ),
         body: Center(
           child: ElevatedButton(
-            onPressed: () => ryan_dio(),
+            // onPressed: () => gethttpClientData;
+            onPressed: (){
+              ryan_dio_get(getUserList, callback:(result){
+                ApiResponse rsp = result as ApiResponse;
+
+                print('返回结果：${rsp.toString(minLevel: DiagnosticLevel.fine)}');
+              });
+            },
+
             child: Text('request', style: TextStyle(fontSize: 30),),
           ),
         ),
